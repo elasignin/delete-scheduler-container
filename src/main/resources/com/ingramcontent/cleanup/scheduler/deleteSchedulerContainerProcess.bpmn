@@ -66,7 +66,7 @@
           <drools:script><![CDATA[System.out.println("Begin: delete QRTZ_TRIGGERS");
 
 String con3 = (String)com.ingramcontent.cleanup.scheduler.ContextUtility.getProcessVariable(kcontext, "container");
-String sql3 = "select * from QRTZ_TRIGGERS WHERE TRIGGER_GROUP = '"+ con3 +"' OR  JOB_GROUP = '"+ con3 +"'";
+String sql3 = "delete from QRTZ_TRIGGERS WHERE TRIGGER_GROUP = '"+ con3 +"' OR  JOB_GROUP = '"+ con3 +"'";
 com.ingramcontent.cleanup.scheduler.ContextUtility.setProcessVariable(kcontext, "sql", sql3);]]></drools:script>
         </drools:onEntry-script>
         <drools:onExit-script scriptFormat="http://www.java.com/java">
@@ -113,7 +113,7 @@ com.ingramcontent.cleanup.scheduler.ContextUtility.setProcessVariable(kcontext, 
           <drools:script><![CDATA[System.out.println("Begin: delete QRTZ_FIRED_TRIGGERS");
 
 String con1 = (String)com.ingramcontent.cleanup.scheduler.ContextUtility.getProcessVariable(kcontext, "container");
-String sql1 = "select * from QRTZ_FIRED_TRIGGERS WHERE TRIGGER_GROUP = '" + con1 + "'";
+String sql1 = "delete from QRTZ_FIRED_TRIGGERS WHERE TRIGGER_GROUP = '" + con1 + "'";
 com.ingramcontent.cleanup.scheduler.ContextUtility.setProcessVariable(kcontext, "sql", sql1);]]></drools:script>
         </drools:onEntry-script>
         <drools:onExit-script scriptFormat="http://www.java.com/java">
@@ -163,7 +163,7 @@ com.ingramcontent.cleanup.scheduler.ContextUtility.setProcessVariable(kcontext, 
           <drools:script><![CDATA[System.out.println("Begin: delete QRTZ_SIMPLE_TRIGGERS");
 
 String con2 = (String)com.ingramcontent.cleanup.scheduler.ContextUtility.getProcessVariable(kcontext, "container");
-String sql2 = "select * from QRTZ_SIMPLE_TRIGGERS WHERE TRIGGER_GROUP = '" + con2 + "'";
+String sql2 = "delete from QRTZ_SIMPLE_TRIGGERS WHERE TRIGGER_GROUP = '" + con2 + "'";
 com.ingramcontent.cleanup.scheduler.ContextUtility.setProcessVariable(kcontext, "sql", sql2);]]></drools:script>
         </drools:onEntry-script>
         <drools:onExit-script scriptFormat="http://www.java.com/java">
@@ -210,7 +210,7 @@ com.ingramcontent.cleanup.scheduler.ContextUtility.setProcessVariable(kcontext, 
           <drools:script><![CDATA[System.out.println("Begin: delete QRTZ_JOB_DETAILS");
 
 String con4 = (String)com.ingramcontent.cleanup.scheduler.ContextUtility.getProcessVariable(kcontext, "container");
-String sql4 = "select * from QRTZ_JOB_DETAILS WHERE JOB_GROUP = '"+ con4 +"'"; 
+String sql4 = "delete from QRTZ_JOB_DETAILS WHERE JOB_GROUP = '"+ con4 +"'"; 
 com.ingramcontent.cleanup.scheduler.ContextUtility.setProcessVariable(kcontext, "sql", sql4);]]></drools:script>
         </drools:onEntry-script>
         <drools:onExit-script scriptFormat="http://www.java.com/java">
