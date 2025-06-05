@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.omg.org/bpmn20" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:bpsim="http://www.bpsim.org/schemas/1.0" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:drools="http://www.jboss.org/drools" id="_OAKLYEHxEfCv_ouMF1Y9FA" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd http://www.jboss.org/drools drools.xsd http://www.bpsim.org/schemas/1.0 bpsim.xsd http://www.omg.org/spec/DD/20100524/DC DC.xsd http://www.omg.org/spec/DD/20100524/DI DI.xsd " exporter="jBPM Process Modeler" exporterVersion="2.0" targetNamespace="http://www.omg.org/bpmn20">
+  <bpmn2:itemDefinition id="_containerItem" structureRef="String"/>
+  <bpmn2:itemDefinition id="_sqlItem" structureRef="String"/>
+  <bpmn2:itemDefinition id="__AC1091A8-3823-4D8B-BE2F-D2640A58FDF3_SQLStatementInputXItem" structureRef="String"/>
+  <bpmn2:itemDefinition id="__AC1091A8-3823-4D8B-BE2F-D2640A58FDF3_ColumnSeparatorInputXItem" structureRef="String"/>
+  <bpmn2:itemDefinition id="__AC1091A8-3823-4D8B-BE2F-D2640A58FDF3_MaxResultsInputXItem" structureRef="String"/>
+  <bpmn2:itemDefinition id="__AC1091A8-3823-4D8B-BE2F-D2640A58FDF3_ResultOutputXItem" structureRef="String"/>
+  <bpmn2:itemDefinition id="__B0B0A181-4E3A-4632-8A24-56B634BDD2A9_SQLStatementInputXItem" structureRef="String"/>
+  <bpmn2:itemDefinition id="__B0B0A181-4E3A-4632-8A24-56B634BDD2A9_ColumnSeparatorInputXItem" structureRef="String"/>
+  <bpmn2:itemDefinition id="__B0B0A181-4E3A-4632-8A24-56B634BDD2A9_MaxResultsInputXItem" structureRef="String"/>
+  <bpmn2:itemDefinition id="__B0B0A181-4E3A-4632-8A24-56B634BDD2A9_ResultOutputXItem" structureRef="String"/>
+  <bpmn2:itemDefinition id="__006126A1-09A3-4EDA-ACB4-71C48F812783_SQLStatementInputXItem" structureRef="String"/>
+  <bpmn2:itemDefinition id="__006126A1-09A3-4EDA-ACB4-71C48F812783_ColumnSeparatorInputXItem" structureRef="String"/>
+  <bpmn2:itemDefinition id="__006126A1-09A3-4EDA-ACB4-71C48F812783_MaxResultsInputXItem" structureRef="String"/>
+  <bpmn2:itemDefinition id="__006126A1-09A3-4EDA-ACB4-71C48F812783_ResultOutputXItem" structureRef="String"/>
+  <bpmn2:itemDefinition id="__314791CC-8CD4-4C3F-8960-A4E02BB50965_SQLStatementInputXItem" structureRef="String"/>
+  <bpmn2:itemDefinition id="__314791CC-8CD4-4C3F-8960-A4E02BB50965_ColumnSeparatorInputXItem" structureRef="String"/>
+  <bpmn2:itemDefinition id="__314791CC-8CD4-4C3F-8960-A4E02BB50965_MaxResultsInputXItem" structureRef="String"/>
+  <bpmn2:itemDefinition id="__314791CC-8CD4-4C3F-8960-A4E02BB50965_ResultOutputXItem" structureRef="String"/>
+  <bpmn2:process id="delete-scheduler-container.deleteSchedulerContainerProcess" drools:packageName="com.ingramcontent.cleanup.scheduler" drools:version="1.0" drools:adHoc="false" name="deleteSchedulerContainerProcess" isExecutable="true" processType="Public">
+    <bpmn2:property id="container" itemSubjectRef="_containerItem" name="container"/>
+    <bpmn2:property id="sql" itemSubjectRef="_sqlItem" name="sql"/>
+    <bpmn2:sequenceFlow id="_586F5FC0-FC90-4030-A4F6-6CD38FACF5FE" sourceRef="_B0B0A181-4E3A-4632-8A24-56B634BDD2A9" targetRef="_314791CC-8CD4-4C3F-8960-A4E02BB50965">
+      <bpmn2:extensionElements>
+        <drools:metaData name="isAutoConnection.target">
+          <drools:metaValue><![CDATA[true]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_2742CD77-AFB2-4AC6-95B2-8EE1822EE7B4" sourceRef="_006126A1-09A3-4EDA-ACB4-71C48F812783" targetRef="_B0B0A181-4E3A-4632-8A24-56B634BDD2A9">
+      <bpmn2:extensionElements>
+        <drools:metaData name="isAutoConnection.target">
+          <drools:metaValue><![CDATA[true]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_37AB9738-D0FB-4196-85D1-31B84995FE95" sourceRef="_AC1091A8-3823-4D8B-BE2F-D2640A58FDF3" targetRef="_40328A1D-B1EA-494D-9807-CB1CAED6DF6B">
+      <bpmn2:extensionElements>
+        <drools:metaData name="isAutoConnection.target">
+          <drools:metaValue><![CDATA[true]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_A084DE4D-F4A7-49B4-8B4A-9620800A7A74" sourceRef="_314791CC-8CD4-4C3F-8960-A4E02BB50965" targetRef="_AC1091A8-3823-4D8B-BE2F-D2640A58FDF3">
+      <bpmn2:extensionElements>
+        <drools:metaData name="isAutoConnection.target">
+          <drools:metaValue><![CDATA[true]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_04D16BB7-59AA-4C7F-9463-D24882061F0F" sourceRef="_86EA81BB-FE33-465E-B790-7BB7C2173B6C" targetRef="_006126A1-09A3-4EDA-ACB4-71C48F812783">
+      <bpmn2:extensionElements>
+        <drools:metaData name="isAutoConnection.target">
+          <drools:metaValue><![CDATA[true]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+    </bpmn2:sequenceFlow>
+    <bpmn2:task id="_314791CC-8CD4-4C3F-8960-A4E02BB50965" drools:taskName="ExecuteSQL" name="delete from QRTZ_TRIGGERS">
+      <bpmn2:documentation id="_OAKLYUHxEfCv_ouMF1Y9FA"><![CDATA[execute-sql-workitem/index.html]]></bpmn2:documentation>
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname">
+          <drools:metaValue><![CDATA[delete from QRTZ_TRIGGERS]]></drools:metaValue>
+        </drools:metaData>
+        <drools:onEntry-script scriptFormat="http://www.java.com/java">
+          <drools:script><![CDATA[System.out.println("Begin: delete QRTZ_TRIGGERS");
+
+String con3 = (String)com.ingramcontent.cleanup.scheduler.ContextUtility.getProcessVariable(kcontext, "container");
+String sql3 = "select * from QRTZ_TRIGGERS WHERE TRIGGER_GROUP = '"+ con3 +"' OR  JOB_GROUP = '"+ con3 +"'";
+com.ingramcontent.cleanup.scheduler.ContextUtility.setProcessVariable(kcontext, "sql", sql3);]]></drools:script>
+        </drools:onEntry-script>
+        <drools:onExit-script scriptFormat="http://www.java.com/java">
+          <drools:script><![CDATA[System.out.println("End: delete QRTZ_TRIGGERS");]]></drools:script>
+        </drools:onExit-script>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>_586F5FC0-FC90-4030-A4F6-6CD38FACF5FE</bpmn2:incoming>
+      <bpmn2:outgoing>_A084DE4D-F4A7-49B4-8B4A-9620800A7A74</bpmn2:outgoing>
+      <bpmn2:ioSpecification id="_OAKLYkHxEfCv_ouMF1Y9FA">
+        <bpmn2:dataInput id="_314791CC-8CD4-4C3F-8960-A4E02BB50965_SQLStatementInputX" drools:dtype="String" itemSubjectRef="__314791CC-8CD4-4C3F-8960-A4E02BB50965_SQLStatementInputXItem" name="SQLStatement"/>
+        <bpmn2:dataInput id="_314791CC-8CD4-4C3F-8960-A4E02BB50965_ColumnSeparatorInputX" drools:dtype="String" itemSubjectRef="__314791CC-8CD4-4C3F-8960-A4E02BB50965_ColumnSeparatorInputXItem" name="ColumnSeparator"/>
+        <bpmn2:dataInput id="_314791CC-8CD4-4C3F-8960-A4E02BB50965_MaxResultsInputX" drools:dtype="String" itemSubjectRef="__314791CC-8CD4-4C3F-8960-A4E02BB50965_MaxResultsInputXItem" name="MaxResults"/>
+        <bpmn2:dataInput id="_314791CC-8CD4-4C3F-8960-A4E02BB50965_TaskNameInputX" drools:dtype="Object" name="TaskName"/>
+        <bpmn2:dataOutput id="_314791CC-8CD4-4C3F-8960-A4E02BB50965_ResultOutputX" drools:dtype="String" itemSubjectRef="__314791CC-8CD4-4C3F-8960-A4E02BB50965_ResultOutputXItem" name="Result"/>
+        <bpmn2:inputSet id="_OAKLY0HxEfCv_ouMF1Y9FA">
+          <bpmn2:dataInputRefs>_314791CC-8CD4-4C3F-8960-A4E02BB50965_SQLStatementInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_314791CC-8CD4-4C3F-8960-A4E02BB50965_ColumnSeparatorInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_314791CC-8CD4-4C3F-8960-A4E02BB50965_MaxResultsInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_314791CC-8CD4-4C3F-8960-A4E02BB50965_TaskNameInputX</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_OAKLZEHxEfCv_ouMF1Y9FA">
+          <bpmn2:dataOutputRefs>_314791CC-8CD4-4C3F-8960-A4E02BB50965_ResultOutputX</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_OAKLZUHxEfCv_ouMF1Y9FA">
+        <bpmn2:sourceRef>sql</bpmn2:sourceRef>
+        <bpmn2:targetRef>_314791CC-8CD4-4C3F-8960-A4E02BB50965_SQLStatementInputX</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_OAKLZkHxEfCv_ouMF1Y9FA">
+        <bpmn2:targetRef>_314791CC-8CD4-4C3F-8960-A4E02BB50965_TaskNameInputX</bpmn2:targetRef>
+        <bpmn2:assignment id="_OAKLZ0HxEfCv_ouMF1Y9FA">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_OAKLaEHxEfCv_ouMF1Y9FA"><![CDATA[ExecuteSQL]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_OAKLaUHxEfCv_ouMF1Y9FA">_314791CC-8CD4-4C3F-8960-A4E02BB50965_TaskNameInputX</bpmn2:to>
+        </bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+    </bpmn2:task>
+    <bpmn2:task id="_006126A1-09A3-4EDA-ACB4-71C48F812783" drools:taskName="ExecuteSQL" name="delete from QRTZ_FIRED_TRIGGERS">
+      <bpmn2:documentation id="_OAKLakHxEfCv_ouMF1Y9FA"><![CDATA[execute-sql-workitem/index.html]]></bpmn2:documentation>
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname">
+          <drools:metaValue><![CDATA[delete from QRTZ_FIRED_TRIGGERS]]></drools:metaValue>
+        </drools:metaData>
+        <drools:onEntry-script scriptFormat="http://www.java.com/java">
+          <drools:script><![CDATA[System.out.println("Begin: delete QRTZ_FIRED_TRIGGERS");
+
+String con1 = (String)com.ingramcontent.cleanup.scheduler.ContextUtility.getProcessVariable(kcontext, "container");
+String sql1 = "select * from QRTZ_FIRED_TRIGGERS WHERE TRIGGER_GROUP = '" + con1 + "'";
+com.ingramcontent.cleanup.scheduler.ContextUtility.setProcessVariable(kcontext, "sql", sql1);]]></drools:script>
+        </drools:onEntry-script>
+        <drools:onExit-script scriptFormat="http://www.java.com/java">
+          <drools:script><![CDATA[System.out.println("End: delete QRTZ_FIRED_TRIGGERS");]]></drools:script>
+        </drools:onExit-script>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>_04D16BB7-59AA-4C7F-9463-D24882061F0F</bpmn2:incoming>
+      <bpmn2:outgoing>_2742CD77-AFB2-4AC6-95B2-8EE1822EE7B4</bpmn2:outgoing>
+      <bpmn2:ioSpecification id="_OAKLa0HxEfCv_ouMF1Y9FA">
+        <bpmn2:dataInput id="_006126A1-09A3-4EDA-ACB4-71C48F812783_SQLStatementInputX" drools:dtype="String" itemSubjectRef="__006126A1-09A3-4EDA-ACB4-71C48F812783_SQLStatementInputXItem" name="SQLStatement"/>
+        <bpmn2:dataInput id="_006126A1-09A3-4EDA-ACB4-71C48F812783_ColumnSeparatorInputX" drools:dtype="String" itemSubjectRef="__006126A1-09A3-4EDA-ACB4-71C48F812783_ColumnSeparatorInputXItem" name="ColumnSeparator"/>
+        <bpmn2:dataInput id="_006126A1-09A3-4EDA-ACB4-71C48F812783_MaxResultsInputX" drools:dtype="String" itemSubjectRef="__006126A1-09A3-4EDA-ACB4-71C48F812783_MaxResultsInputXItem" name="MaxResults"/>
+        <bpmn2:dataInput id="_006126A1-09A3-4EDA-ACB4-71C48F812783_TaskNameInputX" drools:dtype="Object" name="TaskName"/>
+        <bpmn2:dataOutput id="_006126A1-09A3-4EDA-ACB4-71C48F812783_ResultOutputX" drools:dtype="String" itemSubjectRef="__006126A1-09A3-4EDA-ACB4-71C48F812783_ResultOutputXItem" name="Result"/>
+        <bpmn2:inputSet id="_OAKLbEHxEfCv_ouMF1Y9FA">
+          <bpmn2:dataInputRefs>_006126A1-09A3-4EDA-ACB4-71C48F812783_SQLStatementInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_006126A1-09A3-4EDA-ACB4-71C48F812783_ColumnSeparatorInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_006126A1-09A3-4EDA-ACB4-71C48F812783_MaxResultsInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_006126A1-09A3-4EDA-ACB4-71C48F812783_TaskNameInputX</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_OAKLbUHxEfCv_ouMF1Y9FA">
+          <bpmn2:dataOutputRefs>_006126A1-09A3-4EDA-ACB4-71C48F812783_ResultOutputX</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_OAKLbkHxEfCv_ouMF1Y9FA">
+        <bpmn2:sourceRef>sql</bpmn2:sourceRef>
+        <bpmn2:targetRef>_006126A1-09A3-4EDA-ACB4-71C48F812783_SQLStatementInputX</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_OAKLb0HxEfCv_ouMF1Y9FA">
+        <bpmn2:targetRef>_006126A1-09A3-4EDA-ACB4-71C48F812783_TaskNameInputX</bpmn2:targetRef>
+        <bpmn2:assignment id="_OAKLcEHxEfCv_ouMF1Y9FA">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_OAKLcUHxEfCv_ouMF1Y9FA"><![CDATA[ExecuteSQL]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_OAKLckHxEfCv_ouMF1Y9FA">_006126A1-09A3-4EDA-ACB4-71C48F812783_TaskNameInputX</bpmn2:to>
+        </bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+    </bpmn2:task>
+    <bpmn2:endEvent id="_40328A1D-B1EA-494D-9807-CB1CAED6DF6B">
+      <bpmn2:incoming>_37AB9738-D0FB-4196-85D1-31B84995FE95</bpmn2:incoming>
+    </bpmn2:endEvent>
+    <bpmn2:task id="_B0B0A181-4E3A-4632-8A24-56B634BDD2A9" drools:taskName="ExecuteSQL" name="delete from QRTZ_SIMPLE_TRIGGERS">
+      <bpmn2:documentation id="_OAKLc0HxEfCv_ouMF1Y9FA"><![CDATA[execute-sql-workitem/index.html]]></bpmn2:documentation>
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname">
+          <drools:metaValue><![CDATA[delete from QRTZ_SIMPLE_TRIGGERS]]></drools:metaValue>
+        </drools:metaData>
+        <drools:onEntry-script scriptFormat="http://www.java.com/java">
+          <drools:script><![CDATA[System.out.println("Begin: delete QRTZ_SIMPLE_TRIGGERS");
+
+String con2 = (String)com.ingramcontent.cleanup.scheduler.ContextUtility.getProcessVariable(kcontext, "container");
+String sql2 = "select * from QRTZ_SIMPLE_TRIGGERS WHERE TRIGGER_GROUP = '" + con2 + "'";
+com.ingramcontent.cleanup.scheduler.ContextUtility.setProcessVariable(kcontext, "sql", sql2);]]></drools:script>
+        </drools:onEntry-script>
+        <drools:onExit-script scriptFormat="http://www.java.com/java">
+          <drools:script><![CDATA[System.out.println("End: delete QRTZ_SIMPLE_TRIGGERS");]]></drools:script>
+        </drools:onExit-script>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>_2742CD77-AFB2-4AC6-95B2-8EE1822EE7B4</bpmn2:incoming>
+      <bpmn2:outgoing>_586F5FC0-FC90-4030-A4F6-6CD38FACF5FE</bpmn2:outgoing>
+      <bpmn2:ioSpecification id="_OAKLdEHxEfCv_ouMF1Y9FA">
+        <bpmn2:dataInput id="_B0B0A181-4E3A-4632-8A24-56B634BDD2A9_SQLStatementInputX" drools:dtype="String" itemSubjectRef="__B0B0A181-4E3A-4632-8A24-56B634BDD2A9_SQLStatementInputXItem" name="SQLStatement"/>
+        <bpmn2:dataInput id="_B0B0A181-4E3A-4632-8A24-56B634BDD2A9_ColumnSeparatorInputX" drools:dtype="String" itemSubjectRef="__B0B0A181-4E3A-4632-8A24-56B634BDD2A9_ColumnSeparatorInputXItem" name="ColumnSeparator"/>
+        <bpmn2:dataInput id="_B0B0A181-4E3A-4632-8A24-56B634BDD2A9_MaxResultsInputX" drools:dtype="String" itemSubjectRef="__B0B0A181-4E3A-4632-8A24-56B634BDD2A9_MaxResultsInputXItem" name="MaxResults"/>
+        <bpmn2:dataInput id="_B0B0A181-4E3A-4632-8A24-56B634BDD2A9_TaskNameInputX" drools:dtype="Object" name="TaskName"/>
+        <bpmn2:dataOutput id="_B0B0A181-4E3A-4632-8A24-56B634BDD2A9_ResultOutputX" drools:dtype="String" itemSubjectRef="__B0B0A181-4E3A-4632-8A24-56B634BDD2A9_ResultOutputXItem" name="Result"/>
+        <bpmn2:inputSet id="_OAKLdUHxEfCv_ouMF1Y9FA">
+          <bpmn2:dataInputRefs>_B0B0A181-4E3A-4632-8A24-56B634BDD2A9_SQLStatementInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_B0B0A181-4E3A-4632-8A24-56B634BDD2A9_ColumnSeparatorInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_B0B0A181-4E3A-4632-8A24-56B634BDD2A9_MaxResultsInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_B0B0A181-4E3A-4632-8A24-56B634BDD2A9_TaskNameInputX</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_OAKLdkHxEfCv_ouMF1Y9FA">
+          <bpmn2:dataOutputRefs>_B0B0A181-4E3A-4632-8A24-56B634BDD2A9_ResultOutputX</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_OAKLd0HxEfCv_ouMF1Y9FA">
+        <bpmn2:sourceRef>sql</bpmn2:sourceRef>
+        <bpmn2:targetRef>_B0B0A181-4E3A-4632-8A24-56B634BDD2A9_SQLStatementInputX</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_OAKLeEHxEfCv_ouMF1Y9FA">
+        <bpmn2:targetRef>_B0B0A181-4E3A-4632-8A24-56B634BDD2A9_TaskNameInputX</bpmn2:targetRef>
+        <bpmn2:assignment id="_OAKLeUHxEfCv_ouMF1Y9FA">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_OAKLekHxEfCv_ouMF1Y9FA"><![CDATA[ExecuteSQL]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_OAKLe0HxEfCv_ouMF1Y9FA">_B0B0A181-4E3A-4632-8A24-56B634BDD2A9_TaskNameInputX</bpmn2:to>
+        </bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+    </bpmn2:task>
+    <bpmn2:task id="_AC1091A8-3823-4D8B-BE2F-D2640A58FDF3" drools:taskName="ExecuteSQL" name="delete from QRTZ_JOB_DETAILS">
+      <bpmn2:documentation id="_OAKLfEHxEfCv_ouMF1Y9FA"><![CDATA[execute-sql-workitem/index.html]]></bpmn2:documentation>
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname">
+          <drools:metaValue><![CDATA[delete from QRTZ_JOB_DETAILS]]></drools:metaValue>
+        </drools:metaData>
+        <drools:onEntry-script scriptFormat="http://www.java.com/java">
+          <drools:script><![CDATA[System.out.println("Begin: delete QRTZ_JOB_DETAILS");
+
+String con4 = (String)com.ingramcontent.cleanup.scheduler.ContextUtility.getProcessVariable(kcontext, "container");
+String sql4 = "select * from QRTZ_JOB_DETAILS WHERE JOB_GROUP = '"+ con4 +"'"; 
+com.ingramcontent.cleanup.scheduler.ContextUtility.setProcessVariable(kcontext, "sql", sql4);]]></drools:script>
+        </drools:onEntry-script>
+        <drools:onExit-script scriptFormat="http://www.java.com/java">
+          <drools:script><![CDATA[System.out.println("End: delete QRTZ_JOB_DETAILS");]]></drools:script>
+        </drools:onExit-script>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>_A084DE4D-F4A7-49B4-8B4A-9620800A7A74</bpmn2:incoming>
+      <bpmn2:outgoing>_37AB9738-D0FB-4196-85D1-31B84995FE95</bpmn2:outgoing>
+      <bpmn2:ioSpecification id="_OAKLfUHxEfCv_ouMF1Y9FA">
+        <bpmn2:dataInput id="_AC1091A8-3823-4D8B-BE2F-D2640A58FDF3_SQLStatementInputX" drools:dtype="String" itemSubjectRef="__AC1091A8-3823-4D8B-BE2F-D2640A58FDF3_SQLStatementInputXItem" name="SQLStatement"/>
+        <bpmn2:dataInput id="_AC1091A8-3823-4D8B-BE2F-D2640A58FDF3_ColumnSeparatorInputX" drools:dtype="String" itemSubjectRef="__AC1091A8-3823-4D8B-BE2F-D2640A58FDF3_ColumnSeparatorInputXItem" name="ColumnSeparator"/>
+        <bpmn2:dataInput id="_AC1091A8-3823-4D8B-BE2F-D2640A58FDF3_MaxResultsInputX" drools:dtype="String" itemSubjectRef="__AC1091A8-3823-4D8B-BE2F-D2640A58FDF3_MaxResultsInputXItem" name="MaxResults"/>
+        <bpmn2:dataInput id="_AC1091A8-3823-4D8B-BE2F-D2640A58FDF3_TaskNameInputX" drools:dtype="Object" name="TaskName"/>
+        <bpmn2:dataOutput id="_AC1091A8-3823-4D8B-BE2F-D2640A58FDF3_ResultOutputX" drools:dtype="String" itemSubjectRef="__AC1091A8-3823-4D8B-BE2F-D2640A58FDF3_ResultOutputXItem" name="Result"/>
+        <bpmn2:inputSet id="_OAKLfkHxEfCv_ouMF1Y9FA">
+          <bpmn2:dataInputRefs>_AC1091A8-3823-4D8B-BE2F-D2640A58FDF3_SQLStatementInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_AC1091A8-3823-4D8B-BE2F-D2640A58FDF3_ColumnSeparatorInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_AC1091A8-3823-4D8B-BE2F-D2640A58FDF3_MaxResultsInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_AC1091A8-3823-4D8B-BE2F-D2640A58FDF3_TaskNameInputX</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_OAKLf0HxEfCv_ouMF1Y9FA">
+          <bpmn2:dataOutputRefs>_AC1091A8-3823-4D8B-BE2F-D2640A58FDF3_ResultOutputX</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_OAKLgEHxEfCv_ouMF1Y9FA">
+        <bpmn2:sourceRef>sql</bpmn2:sourceRef>
+        <bpmn2:targetRef>_AC1091A8-3823-4D8B-BE2F-D2640A58FDF3_SQLStatementInputX</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_OAKLgUHxEfCv_ouMF1Y9FA">
+        <bpmn2:targetRef>_AC1091A8-3823-4D8B-BE2F-D2640A58FDF3_TaskNameInputX</bpmn2:targetRef>
+        <bpmn2:assignment id="_OAKLgkHxEfCv_ouMF1Y9FA">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_OAKLg0HxEfCv_ouMF1Y9FA"><![CDATA[ExecuteSQL]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_OAKLhEHxEfCv_ouMF1Y9FA">_AC1091A8-3823-4D8B-BE2F-D2640A58FDF3_TaskNameInputX</bpmn2:to>
+        </bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+    </bpmn2:task>
+    <bpmn2:startEvent id="_86EA81BB-FE33-465E-B790-7BB7C2173B6C">
+      <bpmn2:outgoing>_04D16BB7-59AA-4C7F-9463-D24882061F0F</bpmn2:outgoing>
+    </bpmn2:startEvent>
+  </bpmn2:process>
+  <bpmndi:BPMNDiagram id="_OAKLhUHxEfCv_ouMF1Y9FA">
+    <bpmndi:BPMNPlane id="_OAKLhkHxEfCv_ouMF1Y9FA" bpmnElement="delete-scheduler-container.deleteSchedulerContainerProcess">
+      <bpmndi:BPMNShape id="shape__86EA81BB-FE33-465E-B790-7BB7C2173B6C" bpmnElement="_86EA81BB-FE33-465E-B790-7BB7C2173B6C">
+        <dc:Bounds height="56.0" width="56.0" x="157.0" y="91.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="shape__AC1091A8-3823-4D8B-BE2F-D2640A58FDF3" bpmnElement="_AC1091A8-3823-4D8B-BE2F-D2640A58FDF3">
+        <dc:Bounds height="102.0" width="154.0" x="286.0" y="236.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="shape__B0B0A181-4E3A-4632-8A24-56B634BDD2A9" bpmnElement="_B0B0A181-4E3A-4632-8A24-56B634BDD2A9">
+        <dc:Bounds height="102.0" width="154.0" x="504.0" y="68.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="shape__40328A1D-B1EA-494D-9807-CB1CAED6DF6B" bpmnElement="_40328A1D-B1EA-494D-9807-CB1CAED6DF6B">
+        <dc:Bounds height="56.0" width="56.0" x="157.0" y="259.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="shape__006126A1-09A3-4EDA-ACB4-71C48F812783" bpmnElement="_006126A1-09A3-4EDA-ACB4-71C48F812783">
+        <dc:Bounds height="102.0" width="154.0" x="286.0" y="68.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="shape__314791CC-8CD4-4C3F-8960-A4E02BB50965" bpmnElement="_314791CC-8CD4-4C3F-8960-A4E02BB50965">
+        <dc:Bounds height="102.0" width="154.0" x="504.0" y="242.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="edge_shape__86EA81BB-FE33-465E-B790-7BB7C2173B6C_to_shape__006126A1-09A3-4EDA-ACB4-71C48F812783" bpmnElement="_04D16BB7-59AA-4C7F-9463-D24882061F0F">
+        <di:waypoint xsi:type="dc:Point" x="185.0" y="119.0"/>
+        <di:waypoint xsi:type="dc:Point" x="286.0" y="119.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge_shape__314791CC-8CD4-4C3F-8960-A4E02BB50965_to_shape__AC1091A8-3823-4D8B-BE2F-D2640A58FDF3" bpmnElement="_A084DE4D-F4A7-49B4-8B4A-9620800A7A74">
+        <di:waypoint xsi:type="dc:Point" x="581.0" y="293.0"/>
+        <di:waypoint xsi:type="dc:Point" x="440.0" y="287.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge_shape__AC1091A8-3823-4D8B-BE2F-D2640A58FDF3_to_shape__40328A1D-B1EA-494D-9807-CB1CAED6DF6B" bpmnElement="_37AB9738-D0FB-4196-85D1-31B84995FE95">
+        <di:waypoint xsi:type="dc:Point" x="363.0" y="287.0"/>
+        <di:waypoint xsi:type="dc:Point" x="234.0" y="259.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge_shape__006126A1-09A3-4EDA-ACB4-71C48F812783_to_shape__B0B0A181-4E3A-4632-8A24-56B634BDD2A9" bpmnElement="_2742CD77-AFB2-4AC6-95B2-8EE1822EE7B4">
+        <di:waypoint xsi:type="dc:Point" x="363.0" y="119.0"/>
+        <di:waypoint xsi:type="dc:Point" x="504.0" y="119.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge_shape__B0B0A181-4E3A-4632-8A24-56B634BDD2A9_to_shape__314791CC-8CD4-4C3F-8960-A4E02BB50965" bpmnElement="_586F5FC0-FC90-4030-A4F6-6CD38FACF5FE">
+        <di:waypoint xsi:type="dc:Point" x="581.0" y="119.0"/>
+        <di:waypoint xsi:type="dc:Point" x="581.0" y="242.0"/>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+  <bpmn2:relationship id="_OAKLh0HxEfCv_ouMF1Y9FA" type="BPSimData">
+    <bpmn2:extensionElements>
+      <bpsim:BPSimData>
+        <bpsim:Scenario xsi:type="bpsim:Scenario" id="default" name="Simulationscenario">
+          <bpsim:ScenarioParameters xsi:type="bpsim:ScenarioParameters"/>
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_86EA81BB-FE33-465E-B790-7BB7C2173B6C" id="_OAKLiEHxEfCv_ouMF1Y9FA">
+            <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
+              <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
+                <bpsim:NormalDistribution mean="0.0" standardDeviation="0.0"/>
+              </bpsim:ProcessingTime>
+            </bpsim:TimeParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_AC1091A8-3823-4D8B-BE2F-D2640A58FDF3" id="_OAKLiUHxEfCv_ouMF1Y9FA">
+            <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
+              <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
+                <bpsim:NormalDistribution mean="0.0" standardDeviation="0.0"/>
+              </bpsim:ProcessingTime>
+            </bpsim:TimeParameters>
+            <bpsim:ResourceParameters xsi:type="bpsim:ResourceParameters">
+              <bpsim:Availability xsi:type="bpsim:Parameter">
+                <bpsim:FloatingParameter value="0.0"/>
+              </bpsim:Availability>
+              <bpsim:Quantity xsi:type="bpsim:Parameter">
+                <bpsim:FloatingParameter value="0.0"/>
+              </bpsim:Quantity>
+            </bpsim:ResourceParameters>
+            <bpsim:CostParameters xsi:type="bpsim:CostParameters">
+              <bpsim:UnitCost xsi:type="bpsim:Parameter">
+                <bpsim:FloatingParameter value="0.0"/>
+              </bpsim:UnitCost>
+            </bpsim:CostParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_B0B0A181-4E3A-4632-8A24-56B634BDD2A9" id="_OAKLikHxEfCv_ouMF1Y9FA">
+            <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
+              <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
+                <bpsim:NormalDistribution mean="0.0" standardDeviation="0.0"/>
+              </bpsim:ProcessingTime>
+            </bpsim:TimeParameters>
+            <bpsim:ResourceParameters xsi:type="bpsim:ResourceParameters">
+              <bpsim:Availability xsi:type="bpsim:Parameter">
+                <bpsim:FloatingParameter value="0.0"/>
+              </bpsim:Availability>
+              <bpsim:Quantity xsi:type="bpsim:Parameter">
+                <bpsim:FloatingParameter value="0.0"/>
+              </bpsim:Quantity>
+            </bpsim:ResourceParameters>
+            <bpsim:CostParameters xsi:type="bpsim:CostParameters">
+              <bpsim:UnitCost xsi:type="bpsim:Parameter">
+                <bpsim:FloatingParameter value="0.0"/>
+              </bpsim:UnitCost>
+            </bpsim:CostParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_006126A1-09A3-4EDA-ACB4-71C48F812783" id="_OAKLi0HxEfCv_ouMF1Y9FA">
+            <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
+              <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
+                <bpsim:NormalDistribution mean="0.0" standardDeviation="0.0"/>
+              </bpsim:ProcessingTime>
+            </bpsim:TimeParameters>
+            <bpsim:ResourceParameters xsi:type="bpsim:ResourceParameters">
+              <bpsim:Availability xsi:type="bpsim:Parameter">
+                <bpsim:FloatingParameter value="0.0"/>
+              </bpsim:Availability>
+              <bpsim:Quantity xsi:type="bpsim:Parameter">
+                <bpsim:FloatingParameter value="0.0"/>
+              </bpsim:Quantity>
+            </bpsim:ResourceParameters>
+            <bpsim:CostParameters xsi:type="bpsim:CostParameters">
+              <bpsim:UnitCost xsi:type="bpsim:Parameter">
+                <bpsim:FloatingParameter value="0.0"/>
+              </bpsim:UnitCost>
+            </bpsim:CostParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_314791CC-8CD4-4C3F-8960-A4E02BB50965" id="_OAKLjEHxEfCv_ouMF1Y9FA">
+            <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
+              <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
+                <bpsim:NormalDistribution mean="0.0" standardDeviation="0.0"/>
+              </bpsim:ProcessingTime>
+            </bpsim:TimeParameters>
+            <bpsim:ResourceParameters xsi:type="bpsim:ResourceParameters">
+              <bpsim:Availability xsi:type="bpsim:Parameter">
+                <bpsim:FloatingParameter value="0.0"/>
+              </bpsim:Availability>
+              <bpsim:Quantity xsi:type="bpsim:Parameter">
+                <bpsim:FloatingParameter value="0.0"/>
+              </bpsim:Quantity>
+            </bpsim:ResourceParameters>
+            <bpsim:CostParameters xsi:type="bpsim:CostParameters">
+              <bpsim:UnitCost xsi:type="bpsim:Parameter">
+                <bpsim:FloatingParameter value="0.0"/>
+              </bpsim:UnitCost>
+            </bpsim:CostParameters>
+          </bpsim:ElementParameters>
+        </bpsim:Scenario>
+      </bpsim:BPSimData>
+    </bpmn2:extensionElements>
+    <bpmn2:source>_OAKLYEHxEfCv_ouMF1Y9FA</bpmn2:source>
+    <bpmn2:target>_OAKLYEHxEfCv_ouMF1Y9FA</bpmn2:target>
+  </bpmn2:relationship>
+</bpmn2:definitions>
